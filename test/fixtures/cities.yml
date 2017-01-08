@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  state: MyString
+  cost_of_living: 1
+  weather: MyText
+  walk_score: 1
+  air_quality: 1
+  image: MyString
+
+two:
+  name: MyString
+  state: MyString
+  cost_of_living: 1
+  weather: MyText
+  walk_score: 1
+  air_quality: 1
+  image: MyString

@@ -1,0 +1,18 @@
+<h1>Best Places for You</h1>
+<p>Your selected occupation: <%= @job.title %></p>
+
+<% i = 1 %>
+<% @cities.each do |city| %>
+  <h4>#<%= i %>: <a href="/places/<%= city.id %>?job_id=<%= @job.id %>"><%= city.name %></a></h4>
+  <p>State: <%= city.state %></p>
+  <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
+  <p>Cost of Living Index: <%= city.cost_of_living_index %></p>
+  <p>Current Weather: <%= city.current_weather %></p>
+  <p>Walk Score: <%= city.walk_score %></p>
+  <img height=200px src="<%= city.image %>">
+  <% i = i + 1 %>
+<% end %>
+
+<h3><%= link_to "Compare these cities", "/compare?jbc1=#{@recommendations[0].id}&jbc2=#{@recommendations[1].id}&jbc3=#{@recommendations[2].id}&jbc4=#{@recommendations[3].id}&jbc5=#{@recommendations[4].id}" %></h3>
+
+<!-- WHAT IF THERE ARE LESS THAN 5 RECOMMENDATIONS? -->

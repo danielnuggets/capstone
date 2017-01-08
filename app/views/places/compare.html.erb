@@ -1,0 +1,46 @@
+<h2>Compare your top recommendations for <%= @recommendation1.job.title %></h2>
+
+<table style="width:100%">
+  <tr>
+    <th>Location</th>
+    <th>Annual Salary</th>
+    <th>Cost of Living</th> 
+    <th>Current Weather</th>
+    <th>Walk Score</th>
+  </tr>
+  <tr>
+    <td><%= @recommendation1.city.name %>, <%= @recommendation1.city.state %></td>
+    <td><%= @recommendation1.median_salary %></td>
+    <td><%= @recommendation1.city.cost_of_living_index %></td>
+    <td><%= @recommendation1.city.current_weather %></td>
+    <td><%= @recommendation1.city.walk_score %></td>
+  </tr>
+  <tr>
+    <td><%= @recommendation2.city.name %>, <%= @recommendation2.city.state %></td>
+    <td><%= @recommendation2.median_salary %></td>
+    <td><%= @recommendation2.city.cost_of_living_index %></td>
+    <td><%= @recommendation2.city.current_weather %></td>
+    <td><%= @recommendation2.city.walk_score %></td>
+  </tr>
+  <tr>
+    <td><%= @recommendation3.city.name %>, <%= @recommendation3.city.state %></td>
+    <td><%= @recommendation3.median_salary %></td>
+    <td><%= @recommendation3.city.cost_of_living_index %></td>
+    <td><%= @recommendation3.city.current_weather %></td>
+    <td><%= @recommendation3.city.walk_score %></td>
+  </tr>
+  <tr>
+    <td><%= @recommendation4.city.name %>, <%= @recommendation4.city.state %></td>
+    <td><%= @recommendation4.median_salary %></td>
+    <td><%= @recommendation4.city.cost_of_living_index %></td>
+    <td><%= @recommendation4.city.current_weather %></td>
+    <td><%= @recommendation4.city.walk_score %></td>
+  </tr>
+  <tr>
+    <td><%= @recommendation5.city.name %>, <%= @recommendation5.city.state %></td>
+    <td><%= @recommendation5.median_salary %></td>
+    <td><%= @recommendation5.city.cost_of_living_index %></td>
+    <td><%= @recommendation5.city.current_weather %></td>
+    <td><%= @recommendation5.city.walk_score %></td>
+  </tr>
+</table>

@@ -1,0 +1,6 @@
+<h1>City For Me</h1>
+<p>Enter your job or desired job:</p>
+<%= form_tag '/places?', method: :get do %>
+  <%= text_field_tag :job_title %>
+  <%= submit_tag 'Submit' %>
+<% end %>
