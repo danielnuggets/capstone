@@ -6,7 +6,7 @@
   <h4>#<%= i %>: <a href="/places/<%= city.id %>?job_id=<%= @job.id %>"><%= city.name %></a></h4>
   <p>State: <%= city.state %></p>
   <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
-  <p>Cost of Living Index: <%= city.cost_of_living_index %></p>
+  <p>Cost of Living per Month: <%= city.cost_of_living_monthly %></p>
   <p>Current Weather: <%= city.current_weather %></p>
   <p>Walk Score: <%= city.walk_score %></p>
   <img height=200px src="<%= city.image %>">

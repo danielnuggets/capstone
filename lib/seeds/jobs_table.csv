@@ -1,0 +1,289 @@
+id,title,national_median_salary
+1,Management Occupations,63022
+2,Business and Financial Operations Occupations,65710
+3,"Education, Training, and Library Occupations",47220
+4,Pharmacy Technicians,30410
+5,Healthcare Support Occupations,27040
+6,Protective Service Occupations,37730
+7,Food Preparation and Serving Related Occupations,19580
+8,First-Line Supervisors of Food Preparation and Serving Workers,30340
+9,"Cooks, Institution and Cafeteria",23960
+10,"Combined Food Preparation and Serving Workers, Including Fast Food",18910
+11,Building and Grounds Cleaning and Maintenance Occupations,23860
+12,Landscaping and Groundskeeping Workers,25030
+13,Personal Care and Service Occupations,21850
+14,Sales and Related Occupations,25660
+15,First-Line Supervisors of Retail Sales Workers,38310
+16,Cashiers,19310
+17,Retail Salespersons,21780
+18,Office and Administrative Support Occupations,33200
+19,First-Line Supervisors of Office and Administrative Support Workers,52630
+20,"Bookkeeping, Accounting, and Auditing Clerks",37250
+21,Customer Service Representatives,31720
+22,Stock Clerks and Order Fillers,23220
+23,"Secretaries and Administrative Assistants, Except Legal, Medical, and Executive",33910
+24,"Installation, Maintenance, and Repair Occupations",42790
+25,Automotive Service Technicians and Mechanics,37850
+26,"Maintenance and Repair Workers, General",36630
+27,Transportation and Material Moving Occupations,30090
+28,General and Operations Managers,97730
+29,Architecture and Engineering Occupations,76870
+30,Community and Social Service Occupations,42010
+31,"Arts, Design, Entertainment, Sports, and Media Occupations",46160
+32,Healthcare Practitioners and Technical Occupations,62610
+33,Pharmacists,121500
+34,"Cooks, Restaurant",23100
+35,Food Preparation Workers,20180
+36,Waiters and Waitresses,19250
+37,"Janitors and Cleaners, Except Maids and Housekeeping Cleaners",23440
+38,Maids and Housekeeping Cleaners,20740
+39,"Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",55730
+40,Billing and Posting Clerks,35050
+41,Tellers,26410
+42,"Shipping, Receiving, and Traffic Clerks",30450
+43,Executive Secretaries and Executive Administrative Assistants,53370
+44,Construction and Extraction Occupations,42280
+45,Construction Laborers,31910
+46,Production Occupations,32250
+47,Heavy and Tractor-Trailer Truck Drivers,40260
+48,Light Truck or Delivery Services Drivers,29850
+49,"Laborers and Freight, Stock, and Material Movers, Hand",25010
+50,Human Resources Specialists,58350
+51,Accountants and Auditors,67190
+52,Computer and Mathematical Occupations,81430
+53,Teacher Assistants,24900
+54,Licensed Practical and Licensed Vocational Nurses,43170
+55,Receptionists and Information Clerks,27300
+56,"Office Clerks, General",29580
+57,First-Line Supervisors of Production and Operating Workers,56340
+58,"Life, Physical, and Social Science Occupations",62160
+59,Dental Assistants,35980
+60,Counter and Rental Clerks,24440
+61,Carpenters,42090
+62,"First-Line Supervisors of Mechanics, Installers, and Repairers",63010
+63,Financial Managers,117990
+64,Nursing Assistants,25710
+65,Dishwashers,19340
+66,Parts Salespersons,29650
+67,First-Line Supervisors of Construction Trades and Extraction Workers,62070
+68,Operating Engineers and Other Construction Equipment Operators,44600
+69,Computer User Support Specialists,48620
+70,Legal Occupations,78170
+71,Medical Assistants,30590
+72,Police and Sheriff's Patrol Officers,58320
+73,Bartenders,19530
+74,Childcare Workers,20320
+75,"Sales Representatives, Services, All Other",51700
+76,Electricians,51880
+77,Medical and Health Services Managers,94500
+78,Security Guards,24630
+79,Postal Service Mail Carriers,58280
+80,Personal Care Aides,20980
+81,Cleaners of Vehicles and Equipment,21310
+82,Recreation Workers,23320
+83,Lawyers,115820
+84,"Heating, Air Conditioning, and Refrigeration Mechanics and Installers",45110
+85,"Hosts and Hostesses, Restaurant, Lounge, and Coffee Shop",19180
+86,Insurance Sales Agents,48200
+87,Medical Secretaries,33040
+88,"Plumbers, Pipefitters, and Steamfitters",50620
+89,"Preschool Teachers, Except Special Education",28570
+90,"Purchasing Agents, Except Wholesale, Retail, and Farm Products",62220
+91,"Business Operations Specialists, All Other",68170
+92,Driver/Sales Workers,22450
+93,"Packers and Packagers, Hand",21010
+94,"Education Administrators, Elementary and Secondary School",90410
+95,Food Service Managers,48690
+96,"Child, Family, and School Social Workers",42350
+97,"Inspectors, Testers, Sorters, Samplers, and Weighers",36000
+98,"Educational, Guidance, School, and Vocational Counselors",53660
+99,"Hotel, Motel, and Resort Desk Clerks",21040
+100,Bus and Truck Mechanics and Diesel Engine Specialists,44520
+101,Social and Human Service Assistants,30830
+102,Industrial Truck and Tractor Operators,32090
+103,Loan Officers,63430
+104,Payroll and Timekeeping Clerks,41000
+105,"Bus Drivers, School or Special Client",29490
+106,Network and Computer Systems Administrators,77810
+107,Registered Nurses,67490
+108,First-Line Supervisors of Housekeeping and Janitorial Workers,37050
+109,First-Line Supervisors of Transportation and Material-Moving Machine and Vehicle Operators,55860
+110,Dental Hygienists,72330
+111,Administrative Services Managers,86110
+112,"Elementary School Teachers, Except Special Education",54890
+113,"Production, Planning, and Expediting Clerks",46150
+114,"Welders, Cutters, Solderers, and Brazers",38150
+115,Physical Therapists,84020
+116,Industrial Machinery Mechanics,49690
+117,"Hairdressers, Hairstylists, and Cosmetologists",23660
+118,Cost Estimators,60390
+119,Medical Records and Health Information Technicians,37110
+120,First-Line Supervisors of Personal Service Workers,35710
+121,Sales Managers,113860
+122,"Counter Attendants, Cafeteria, Food Concession, and Coffee Shop",19230
+123,Market Research Analysts and Marketing Specialists,62150
+124,Compliance Officers,65640
+125,Dining Room and Cafeteria Attendants and Bartender Helpers,19280
+126,First-Line Supervisors of Non-Retail Sales Workers,72300
+127,"Managers, All Other",104850
+128,Management Analysts,81320
+129,"Secondary School Teachers, Except Special and Career/Technical Education",57200
+130,"Dispatchers, Except Police, Fire, and Ambulance",37150
+131,Training and Development Specialists,58210
+132,"Physicians and Surgeons, All Other",146861
+133,Home Health Aides,21920
+134,Laundry and Dry-Cleaning Workers,20820
+135,Librarians,56880
+136,Nonfarm Animal Caretakers,21010
+137,Helpers--Production Workers,23960
+138,Civil Engineers,82220
+139,Chief Executives,175110
+140,Team Assemblers,29080
+141,Machinists,40550
+142,Radiologic Technologists,56670
+143,Construction Managers,87400
+144,Nurse Practitioners,98190
+145,"Human Resources Assistants, Except Payroll and Timekeeping",38100
+146,Paralegals and Legal Assistants,48810
+147,Bill and Account Collectors,34440
+148,"Painters, Construction and Maintenance",36580
+149,"First-Line Supervisors of Helpers, Laborers, and Material Movers, Hand",46960
+150,"Middle School Teachers, Except Special and Career/Technical Education",55860
+151,Healthcare Social Workers,52380
+152,Bakers,24170
+153,Automotive Body and Related Repairers,40970
+154,Coaches and Scouts,31000
+155,Water and Wastewater Treatment Plant and System Operators,44790
+156,Amusement and Recreation Attendants,19280
+157,Graphic Designers,46900
+158,"Cooks, Fast Food",19080
+159,"Farming, Fishing, and Forestry Occupations",21760
+160,Butchers and Meat Cutters,29130
+161,Industrial Production Managers,93940
+162,Speech-Language Pathologists,73410
+163,Social and Community Service Managers,63530
+164,Computer Systems Analysts,85800
+165,Self-Enrichment Education Teachers,36680
+166,Legal Secretaries,43200
+167,Loan Interviewers and Clerks,37710
+168,Industrial Engineers,83470
+169,Fitness Trainers and Aerobics Instructors,36160
+170,Public Relations Specialists,56770
+171,"Food Servers, Nonrestaurant",20420
+172,"Kindergarten Teachers, Except Special Education",51640
+173,"Teachers and Instructors, All Other, Except Substitute Teachers",40140
+174,Highway Maintenance Workers,36930
+175,Computer and Information Systems Managers,131600
+176,Occupational Therapists,80150
+177,Data Entry Keyers,29460
+178,Cement Masons and Concrete Finishers,37740
+179,"Court, Municipal, and License Clerks",35850
+180,"Installation, Maintenance, and Repair Workers, All Other",37730
+181,"Mobile Heavy Equipment Mechanics, Except Engines",48770
+182,"Securities, Commodities, and Financial Services Sales Agents",71550
+183,Printing Press Operators,35240
+184,Mechanical Engineers,83590
+185,First-Line Supervisors of Police and Detectives,82090
+186,"Cooks, Short Order",20780
+187,"Sales Representatives, Wholesale and Manufacturing, Technical and Scientific Products",76190
+188,Packaging and Filling Machine Operators and Tenders,27080
+189,Taxi Drivers and Chauffeurs,23510
+190,"Telecommunications Equipment Installers and Repairers, Except Line Installers",54570
+191,"Software Developers, Applications",98260
+192,"Property, Real Estate, and Community Association Managers",55380
+193,Firefighters,46870
+194,"Assemblers and Fabricators, All Other",27620
+195,Physical Therapist Assistants,55170
+196,Instructional Coordinators,62270
+197,"Special Education Teachers, Kindergarten and Elementary School",55810
+198,File Clerks,27850
+199,Postal Service Clerks,56790
+200,"First-Line Supervisors of Landscaping, Lawn Service, and Groundskeeping Workers",43980
+201,"Dentists, General",152700
+202,Computer Programmers,79530
+203,Family and General Practitioners,184390
+204,Order Clerks,32330
+205,Library Technicians,32310
+206,Medical and Clinical Laboratory Technicians,38970
+207,"Information and Record Clerks, All Other",37990
+208,"Helpers--Installation, Maintenance, and Repair Workers",26400
+209,Advertising Sales Agents,48490
+210,Tire Repairers and Changers,24220
+211,Substitute Teachers,26830
+212,Mental Health Counselors,41880
+213,"Opticians, Dispensing",34840
+214,"Police, Fire, and Ambulance Dispatchers",38010
+215,Veterinary Technologists and Technicians,31800
+216,Chefs and Head Cooks,41500
+217,"Switchboard Operators, Including Answering Service",27440
+218,Human Resources Managers,104440
+219,Automotive and Watercraft Service Attendants,21560
+220,Medical and Clinical Laboratory Technologists,60520
+221,Computer Network Support Specialists,62250
+222,Personal Financial Advisors,89160
+223,Physician Assistants,98180
+224,"Library Assistants, Clerical",24480
+225,Emergency Medical Technicians and Paramedics,31980
+226,"Office and Administrative Support Workers, All Other",32590
+227,Architectural and Engineering Managers,132800
+228,"Clinical, Counseling, and School Psychologists",70580
+229,Sheet Metal Workers,45750
+230,Refuse and Recyclable Material Collectors,33800
+231,Phlebotomists,31630
+232,"Eligibility Interviewers, Government Programs",43170
+233,Construction and Building Inspectors,57340
+234,"Transportation, Storage, and Distribution Managers",86630
+235,"Interviewers, Except Eligibility and Loan",31410
+236,"Production Workers, All Other",27950
+237,"Special Education Teachers, Secondary School",58500
+238,"Claims Adjusters, Examiners, and Investigators",62980
+239,Surgical Technologists,44330
+240,Electrical Engineers,93010
+241,"Computer Occupations, All Other",85240
+242,Mental Health and Substance Abuse Social Workers,42170
+243,Real Estate Sales Agents,43370
+244,Roofers,36720
+245,"Cutting, Punching, and Press Machine Setters, Operators, and Tenders, Metal and Plastic",31280
+246,Veterinarians,88490
+247,"Protective Service Workers, All Other",28650
+248,Rehabilitation Counselors,34390
+249,Procurement Clerks,40600
+250,"Computer, Automated Teller, and Office Machine Repairers",36840
+251,Respiratory Therapists,57790
+252,Insurance Claims and Policy Processing Clerks,37530
+253,"Wholesale and Retail Buyers, Except Farm Products",52940
+254,Detectives and Criminal Investigators,77210
+255,Residential Advisors,24990
+256,Architectural and Civil Drafters,50710
+257,Financial Analysts,80310
+258,Marketing Managers,128750
+259,"Maintenance Workers, Machinery",43260
+260,"Health Technologists and Technicians, All Other",41260
+261,Logisticians,74260
+262,Occupational Health and Safety Specialists,70210
+263,Electrical and Electronics Engineering Technicians,61130
+264,Merchandise Displayers and Window Trimmers,26870
+265,Veterinary Assistants and Laboratory Animal Caretakers,24360
+266,"Mixing and Blending Machine Setters, Operators, and Tenders",34600
+267,"Vocational Education Teachers, Postsecondary",49470
+268,Web Developers,64970
+269,Dietitians and Nutritionists,57910
+270,"Financial Specialists, All Other",66670
+271,Substance Abuse and Behavioral Disorder Counselors,39980
+272,"Coating, Painting, and Spraying Machine Setters, Operators, and Tenders",31940
+273,"Healthcare Support Workers, All Other",35780
+274,Diagnostic Medical Sonographers,68970
+275,Civil Engineering Technicians,49260
+276,"Community and Social Service Specialists, All Other",41890
+277,Couriers and Messengers,27280
+278,"Environmental Scientists and Specialists, Including Health",67460
+279,"Software Developers, Systems Software",105570
+280,Database Administrators,81710
+281,Medical Transcriptionists,34890
+282,Cabinetmakers and Bench Carpenters,32270
+283,"Education Administrators, Postsecondary",88580
+284,Sewing Machine Operators,22550
+285,"Mail Clerks and Mail Machine Operators, Except Postal Service",28570
+286,"Computer-Controlled Machine Tool Operators, Metal and Plastic",37030
+287,"Meeting, Convention, and Event Planners",46840
+288,First-Line Supervisors of Fire Fighting and Prevention Workers,72230
