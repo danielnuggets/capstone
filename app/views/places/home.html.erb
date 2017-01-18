@@ -77,40 +77,22 @@
   <div id="hero"> <!-- background image is in compiled/theme.css -->
     <div class="container">
       <h1 class="hero-text animated fadeInDown">
-        Enter your job
+        Finding the city for you.
       </h1>
 
-<!-- I copied this from bootstrap website -->
+<!-- The search form -->
 
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="button">Go!</button>
-            </span>
-          </div><!-- /input-group -->
-        </div><!-- /.col-lg-6 -->
-      </div><!-- /.row -->
-
-<!-- I copied this from bootstrap website -->
+      <%= form_tag '/places?', class: "form-inline", method: :get do %>
+        <div class="form-group">
+          <%= text_field_tag :job_title, '', placeholder: "Enter an occupation...", class: "form-control", size: 70 %>
+        </div>
+          <%= submit_tag 'Go !', class: "button-outline" %>
+      <% end %>
 
       <p class="sub-text animated fadeInDown">
-        You can also enter your desired job.
+        YoUrban will recommend the best cities for your occupation.
       </p>
 
-      <div class="cta animated fadeInDown">
-        <a href="features.html" class="button-outline">See the tour</a>
-        <a href="signup.html" class="button">Sign up free</a>
-      </div>
-      <div class="img"></div>
     </div>
   </div>
 
-
-<h1>City For Me</h1>
-<p>Enter your job or desired job:</p>
-<%= form_tag '/places?', method: :get do %>
-  <%= text_field_tag :job_title %>
-  <%= submit_tag 'Submit' %>
-<% end %>
