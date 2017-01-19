@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+#dantitle {
+  font-family: Myriad Pro, Lato, Helvetica Neue, Arial;
+  font-size: 38px;
+  font-weight: 600;
+  margin-top: 33px;
+}

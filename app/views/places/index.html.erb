@@ -1,3 +1,4 @@
+<body id="blog"> 
   <header class="navbar navbar-inverse hero" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -76,90 +77,59 @@
   <div id="dan"> <!-- background image is in compiled/theme.css -->
   </div>
 
+
+
+<!-- my code starts here -->
+
+<h1>Best Places for You</h1>
+<p>Your selected occupation: <%= @job.title %></p>
+
+<h3><%= link_to "Compare these cities", "/compare?jbc1=#{@recommendations[0].id}&jbc2=#{@recommendations[1].id}&jbc3=#{@recommendations[2].id}&jbc4=#{@recommendations[3].id}&jbc5=#{@recommendations[4].id}" %></h3>
+
+<!-- WHAT IF THERE ARE LESS THAN 5 RECOMMENDATIONS? -->
+
+
   <div id="posts">
     <div class="container">
       <div class="row">
         <div class="col-md-9">
 
           <div class="post">
-            <a href="blogpost.html" class="pic">
-              <img src="images/blogpost1.png" class="img-responsive" alt="blogpost" />
-            </a>
-
             <div class="title">
-              <a href="blogpost.html">A brief history of climate science</a>
+              <h4 id="dantitle">Your Results</h4>
             </div>
-            <div class="author">
-              <img src="images/testimonials/testimonial2.jpg" class="avatar" alt="author" />
-              Jessica Smith, October 03, 2013
-            </div>
-            <p class="intro">
-              By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
-              <br />
-              Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
-            </p>
-            <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
           </div>
 
-          <div class="post">
-            <div class="video">
-              <div class="iframe-wrapper">
-                <iframe src="http://player.vimeo.com/video/22439234" width="620" height="350" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+          <% i = 1 %>
+          <% @cities.each do |city| %>
+
+            <div class="post">
+              <div class="title">
+                <a href="/places/<%= city.id %>?job_id=<%= @job.id %>">#<%= i %>: <%= city.name %></a>
               </div>
-            </div>
 
-            <div class="title">
-              <a href="blogpost.html">Discover what is beyond our Solar System</a>
-            </div>
-            <div class="author">
-              <img src="images/testimonials/testimonial2.jpg" class="avatar" alt="author" />
-              Eric Hoffman, October 11, 2013
-            </div>
-            <p class="intro">
-              By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
-              <br />
-              Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
-            </p>
-            <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
-          </div>
+              <a href="blogpost.html" class="pic">
+                <img src="/assets/blogpost3.png" class="img-responsive" alt="blogpost" />
+              </a>
 
-          <div class="post">
-            <a href="blogpost.html" class="pic">
-              <img src="images/blogpost2.png" class="img-responsive" alt="blogpost" />
-            </a>
+              <div class="author">
+                Benjamin Andrews, August 16, 2013
+              </div>
 
-            <div class="title">
-              <a href="blogpost.html">How to get really good at programming</a>
-            </div>
-            <div class="author">
-              <img src="images/testimonials/testimonial4.jpg" class="avatar" alt="author" />
-              Amanda Johnson, September 23, 2013
-            </div>
-            <p class="intro">
-              By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
-            </p>
-            <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
-          </div>
+              <p class="intro">
+                <p>State: <%= city.state %></p>
+                <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
+                <p>Cost of Living per Month: <%= city.cost_of_living_monthly %></p>
+                <p>Current Weather: <%= city.current_weather %></p>
+                <p>Walk Score: <%= city.walk_score %></p>
+              </p>
 
-          <div class="post">
-            <a href="blogpost.html" class="pic">
-              <img src="images/blogpost3.png" class="img-responsive" alt="blogpost" />
-            </a>
+              <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
 
-            <div class="title">
-              <a href="blogpost.html">Get healthy riding a bicycle everyday</a>
             </div>
-            <div class="author">
-              <img src="images/testimonials/testimonial3.jpg" class="avatar" alt="author" />
-              Benjamin Andrews, August 16, 2013
-            </div>
-            <p class="intro">
-              By Ed Hawkins, University of Reading. Climate change is often seen as a recent phenomenon, but its roots are actually far older — the stuff that is currently happening is beyond my understanding.
-              <br />
-              Some people say design is about solving problems. Obviously designers solve problems but so do dentists. Design is about cultural invention.
-            </p>
-            <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
-          </div>
+            <% i = i + 1 %>
+          <% end %>
 
           <div class="pages">
             <ul class="pagination">
@@ -172,6 +142,7 @@
             </ul>
           </div>
         </div>
+
         <div class="col-md-3 sidebar">
           <div class="search">
             <form>
@@ -190,7 +161,7 @@
             </p>
           </div>
           <div class="follow-tw">
-            <img src="images/twitterfollow.png" alt="follow-tw" />
+            <img src="/assets/twitterfollow.png" alt="follow-tw" />
           </div>
           <div class="best-hits">
             <strong>Check out our best hits:</strong>
@@ -205,25 +176,51 @@
     </div>
   </div>
 
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 copyright">
+          React © 2014
+        </div>
+        <div class="col-sm-6 menu">
+          <ul>
+                <li>
+                    <a href="features.html">Features</a>
+                </li>
+                <li>
+                  <a href="services.html">Services</a>
+                </li>
+                <li>
+                    <a href="pricing.html">Pricing</a>
+                </li>
+                <li>
+                    <a href="support.html">Support</a>
+                </li>
+                <li class="active">
+                    <a href="blog.html">Blog</a>
+                </li>
+              </ul>
+        </div>
+        <div class="col-sm-3 social">
+          <a href="#">
+            <img src="images/social/social-tw.png" alt="twitter" />
+          </a>
+          <a href="#">
+            <img src="images/social/social-dbl.png" alt="dribbble" />
+          </a>          
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-<!-- my code starts here -->
-
-<h1>Best Places for You</h1>
-<p>Your selected occupation: <%= @job.title %></p>
-
-<% i = 1 %>
-<% @cities.each do |city| %>
-  <h4>#<%= i %>: <a href="/places/<%= city.id %>?job_id=<%= @job.id %>"><%= city.name %></a></h4>
-  <p>State: <%= city.state %></p>
-  <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
-  <p>Cost of Living per Month: <%= city.cost_of_living_monthly %></p>
-  <p>Current Weather: <%= city.current_weather %></p>
-  <p>Walk Score: <%= city.walk_score %></p>
-  <img height=200px src="<%= city.image %>">
-  <% i = i + 1 %>
-<% end %>
-
-<h3><%= link_to "Compare these cities", "/compare?jbc1=#{@recommendations[0].id}&jbc2=#{@recommendations[1].id}&jbc3=#{@recommendations[2].id}&jbc4=#{@recommendations[3].id}&jbc5=#{@recommendations[4].id}" %></h3>
-
-<!-- WHAT IF THERE ARE LESS THAN 5 RECOMMENDATIONS?
+  <script type="text/javascript">
+    $(function () {
+      $(".search input:text").focus(function () {
+        $(".icomoon-search").addClass("active");
+      });
+      $(".search input:text").blur(function () {
+        $(".icomoon-search").removeClass("active");
+      });
+    });
+  </script>
+</body>
