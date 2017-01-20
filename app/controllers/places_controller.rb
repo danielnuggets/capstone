@@ -1,15 +1,17 @@
 class PlacesController < ApplicationController
   def home
+    @jobs = Job.all
   end
 
   def index
     @job = Job.find_by(title: params[:job_title])
 
     #take the job that the user entered, sort the job_by_cities table by score in descending order, grabbing the first 5.
-    @recommendations = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+    @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+    p @results
     @cities = []
-    @recommendations.each do |recommendation|
-      @cities << recommendation.city
+    @results.each do |result|
+      @cities << result.city
     end
   end
 
@@ -19,10 +21,12 @@ class PlacesController < ApplicationController
   end
 
   def compare
-    @recommendation1 = JobByCity.find(params[:jbc1])
-    @recommendation2 = JobByCity.find(params[:jbc2])
-    @recommendation3 = JobByCity.find(params[:jbc3])
-    @recommendation4 = JobByCity.find(params[:jbc4])
-    @recommendation5 = JobByCity.find(params[:jbc5])
+    @results = [
+      JobByCity.find(params[:a]),
+      JobByCity.find(params[:b]),
+      JobByCity.find(params[:c]),
+      JobByCity.find(params[:d]),
+      JobByCity.find(params[:e])
+    ]
   end
 end

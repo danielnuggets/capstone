@@ -85,7 +85,12 @@
 
       <%= form_tag '/places?', class: "form-inline", method: :get do %>
         <div class="form-group">
-          <%= text_field_tag :job_title, '', placeholder: "Enter an occupation...", class: "form-control", size: 70 %>
+          <%= text_field_tag :job_title, '', placeholder: "Enter an occupation...", class: "form-control", size: 70, list: 'job-title' %>
+          <datalist id='job-title'>
+            <% @jobs.all.each do |job| %>
+              <option value="<%= job.title %>"></option>
+            <% end %>
+          </datalist>
         </div>
           <%= submit_tag 'Go !', class: "button-outline" %>
       <% end %>

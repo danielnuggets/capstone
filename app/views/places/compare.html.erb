@@ -1,46 +1,257 @@
-<h2>Compare your top recommendations for <%= @recommendation1.job.title %></h2>
+<body id="charts">
+  <header class="navbar navbar-inverse hero" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/home" class="navbar-brand">YoUrban</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Home alts <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1 (Current)</a></li>
+              <li><a href="index2.html">Home 2 (Slider)</a></li>
+              <li><a href="index3.html">Home 3 (Off-canvas menu)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Showcase <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="features.html">Features</a></li>
+              <li><a href="services.html">Services</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Pricing <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="pricing.html">Pricing charts</a></li>
+              <li><a href="charts.html">Comparison tables</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    More pages <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="aboutus.html">About us</a></li>
+              <li><a href="contactus.html">Contact us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="portfolio-item.html">Portfolio Item</a></li>
+              <li><a href="invoice.html">Invoice page</a></li>
+              <li><a href="timeline.html">Timeline Page</a></li>
+              <li><a href="docs.html">API Documentation</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="coming-soon.html">Coming Soon</a></li>
+              <li><a href="status.html">Status</a></li>
+              <li><a href="signup.html">Sign Up & Sign In</a></li>
+              <li><a href="signup-rotate.html">Sign Up Miscellaneous</a></li>
+              <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Blog <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="blogpost.html">Blog Post</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </div>
+  </header>
 
-<table style="width:100%">
-  <tr>
-    <th>Location</th>
-    <th>Annual Salary</th>
-    <th>Cost of Living</th> 
-    <th>Current Weather</th>
-    <th>Walk Score</th>
-  </tr>
-  <tr>
-    <td><%= @recommendation1.city.name %>, <%= @recommendation1.city.state %></td>
-    <td><%= @recommendation1.median_salary %></td>
-    <td><%= @recommendation1.city.cost_of_living_index %></td>
-    <td><%= @recommendation1.city.current_weather %></td>
-    <td><%= @recommendation1.city.walk_score %></td>
-  </tr>
-  <tr>
-    <td><%= @recommendation2.city.name %>, <%= @recommendation2.city.state %></td>
-    <td><%= @recommendation2.median_salary %></td>
-    <td><%= @recommendation2.city.cost_of_living_index %></td>
-    <td><%= @recommendation2.city.current_weather %></td>
-    <td><%= @recommendation2.city.walk_score %></td>
-  </tr>
-  <tr>
-    <td><%= @recommendation3.city.name %>, <%= @recommendation3.city.state %></td>
-    <td><%= @recommendation3.median_salary %></td>
-    <td><%= @recommendation3.city.cost_of_living_index %></td>
-    <td><%= @recommendation3.city.current_weather %></td>
-    <td><%= @recommendation3.city.walk_score %></td>
-  </tr>
-  <tr>
-    <td><%= @recommendation4.city.name %>, <%= @recommendation4.city.state %></td>
-    <td><%= @recommendation4.median_salary %></td>
-    <td><%= @recommendation4.city.cost_of_living_index %></td>
-    <td><%= @recommendation4.city.current_weather %></td>
-    <td><%= @recommendation4.city.walk_score %></td>
-  </tr>
-  <tr>
-    <td><%= @recommendation5.city.name %>, <%= @recommendation5.city.state %></td>
-    <td><%= @recommendation5.median_salary %></td>
-    <td><%= @recommendation5.city.cost_of_living_index %></td>
-    <td><%= @recommendation5.city.current_weather %></td>
-    <td><%= @recommendation5.city.walk_score %></td>
-  </tr>
-</table>
+  <div id="dan"> <!-- background image is in compiled/theme.css -->
+  </div>
+
+  <div id="chart-option">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><div class="divider"></div></div>
+      </div>
+      <div class="row header">
+        <h3>Compare Your Results</h3>
+        <p>
+          Displaying results for <%= @results[0].job.title %>
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="chart clearfix">
+            <div class="features-col col-sm-4">
+              <div class="header">                
+                Location
+              </div>
+              <% @results.each do |result| %>
+                <div class="spec">
+                  <span class="icon brankic-calendar2"></span>
+                  <%= result.city.name + ", " + result.city.state%>
+                </div>
+              <% end %>
+            </div>
+            <div class="plan-col col-sm-2">
+              <div class="header">
+                Average Salary
+                <div class="price">
+                  Annual
+                </div>
+              </div>
+              <% @results.each do |result| %>
+                <div class="spec">
+                  <%= result.median_salary %>
+                </div>
+              <% end %>
+
+              <a href="signup.html" class="button button-small">Sign up free</a>
+            </div>
+            <div class="plan-col col-sm-2">
+              <div class="header">
+                Cost of Living
+                <div class="price">
+                  Monthly
+                </div>
+              </div>
+              <% @results.each do |result| %>
+                <div class="spec">
+                  <%= result.city.cost_of_living_monthly %>
+                </div>
+              <% end %>
+
+              <a href="signup.html" class="button button-small">Sign up free</a>
+            </div>
+            <div class="plan-col col-sm-2">
+              <div class="header">
+                Current Weather
+                <div class="price">
+                  Current Time
+                </div>
+              </div>
+              <% @results.each do |result| %>
+                <div class="spec">
+                  <%= result.city.current_weather %>
+                </div>
+              <% end %>
+
+              <a href="signup.html" class="button button-small">Sign up free</a>
+            </div>
+            <div class="plan-col last col-sm-2">
+              <div class="header">
+                Walk Score
+                <div class="price">
+                  asdf
+                </div>
+              </div>
+              <% @results.each do |result| %>
+                <div class="spec">
+                  <%= result.city.walk_score %>
+                </div>
+              <% end %>
+
+              <a href="signup.html" class="button button-small">Sign up free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row message">
+        <p>
+          All of our plans come with a 30 day trial with no credit card required, we also offer a 
+          <a href="signup.html">free plan</a>.
+        </p>
+      </div>  
+      <div class="row faq">
+        <div class="col-md-12">
+          <div class="row header">
+            <div class="col-md-12">
+              <h3>Frequently Asked Questions</h3>
+            </div>
+          </div>
+          <div class="row questions">
+            <div class="col-md-6">
+              <div class="question">
+                <strong>Do I need a card to signup?</strong>
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the randomised words which don’t look even slightly believable. If you are anything embarrassing hidden in the middle of text.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="question">
+                <strong>Can I cancel at anytime?</strong>
+                <p>
+                  There are many variations of passages of Lorem Ipsum available, but the randomised words which don’t look even slightly believable. If you are anything embarrassing hidden in the middle of text.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 copyright">
+          React © 2014
+        </div>
+        <div class="col-sm-6 menu">
+          <ul>
+                <li>
+                    <a href="features.html">Features</a>
+                </li>
+                <li>
+                  <a href="services.html">Services</a>
+                </li>
+                <li class="active">
+                    <a href="pricing.html">Pricing</a>
+                </li>
+                <li>
+                    <a href="support.html">Support</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+              </ul>
+        </div>
+        <div class="col-sm-3 social">
+          <a href="#">
+            <img src="images/social/social-tw.png" alt="twitter" />
+          </a>
+          <a href="#">
+            <img src="images/social/social-dbl.png" alt="dribbble" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      
+      // Enables the pricing tabs
+      $tabs = $("#tabs-option .tab");
+      $prices = $("#tabs-option .price");
+      $tabs.click(function () {
+        $tabs.removeClass("active");
+        $(this).addClass("active");
+        var dataPrice = $(this).hasClass("monthly") ? "monthly" : "anually";
+        $prices.each(function (index, el) {
+          $(el).html($(el).data(dataPrice));
+        });
+      });
+    });
+  </script>
+</body>
