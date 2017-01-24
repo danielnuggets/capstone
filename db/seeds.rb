@@ -11,6 +11,9 @@ csv.each do |row|
   t.name = row['name']
   t.state = row['state']
   t.cost_of_living_monthly = row['cost_of_living_monthly']
+  t.walk_score = row['walk_score']
+  t.image = row['image']
+  t.population = row['population']
   t.save
 end
 

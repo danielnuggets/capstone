@@ -1,11 +1,204 @@
-<h1><%= @city.name %></h1>
-<p>State: <%= @city.state %></p>
-<p>Cost of Living per Month: <%= @city.cost_of_living_monthly %></p>
-<p>Current Weather: <%= @city.current_weather %></p>
-<p>Walk Score: <%= @city.walk_score %></p>
-<img height=200px src="<%= @city.image %>">
+<body id="services">
+  <header class="navbar navbar-inverse hero" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/home" class="navbar-brand">YoUrban</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Home alts <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="index.html">Home 1 (Current)</a></li>
+              <li><a href="index2.html">Home 2 (Slider)</a></li>
+              <li><a href="index3.html">Home 3 (Off-canvas menu)</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Showcase <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="features.html">Features</a></li>
+              <li><a href="services.html">Services</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Pricing <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="pricing.html">Pricing charts</a></li>
+              <li><a href="charts.html">Comparison tables</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    More pages <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="aboutus.html">About us</a></li>
+              <li><a href="contactus.html">Contact us</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="portfolio.html">Portfolio</a></li>
+              <li><a href="portfolio-item.html">Portfolio Item</a></li>
+              <li><a href="invoice.html">Invoice page</a></li>
+              <li><a href="timeline.html">Timeline Page</a></li>
+              <li><a href="docs.html">API Documentation</a></li>
+              <li><a href="support.html">Support</a></li>
+              <li><a href="coming-soon.html">Coming Soon</a></li>
+              <li><a href="status.html">Status</a></li>
+              <li><a href="signup.html">Sign Up & Sign In</a></li>
+              <li><a href="signup-rotate.html">Sign Up Miscellaneous</a></li>
+              <li><a href="404.html">404 Page</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    Blog <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="blogpost.html">Blog Post</a></li>
+                </ul>
+              </li>
+            </ul>
+        </nav>
+      </div>
+  </header>
+
+  <div id="dan"> <!-- background image is in compiled/theme.css -->
+  </div>
+
+
 
 <h4>Occupation: <%= @job.title %></h4>
 <p>Average Salary Across US: <%= @job.national_median_salary %></p>
-<p>Salary in <%= @city.name %>: <%= JobByCity.find_by(city_id: @city.id, job_id: @job.id).median_salary %></p>
+
+  
+  <div id="hero">
+    <div class="container dan">
+      <div class="row" style="overflow:hidden;">
+        <div class="col-md-5 image">
+          <img src=<%= @city.image %> class="img-responsive animated fadeInUp img-circle" alt="services1" height="375" width="500" >
+        </div>
+        <div class="col-md-7 info">
+          <h3><%= @city.name + ", " + @city.state %></h3>
+          <p>
+            You will find a variety of ways to present your services such as grids and lists.
+            <br />
+            We plan to update this product with more pages and features as we keep on going.
+          </p>
+          <p>Current Weather: <%= "weather goes here" %></p>
+        </div>
+      </div>
+      <div class="row danstats">
+        <div class="col-sm-3">
+          <strong><%= number_to_currency(JobByCity.find_by(city_id: @city.id, job_id: @job.id).median_salary, precision: 0) %></strong>
+          Salary
+        </div>
+        <div class="col-sm-3">
+          <strong><%= number_to_currency(@city.cost_of_living_monthly, precision: 0) %></strong>
+          Monthly Expenses
+        </div>
+        <div class="col-sm-3">
+          <strong><%= number_with_delimiter(@city.population, delimiter: ',') %></strong>
+          Population
+        </div>
+        <div class="col-sm-3">
+          <strong><%= @city.walk_score %></strong>
+          Walk Score*
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div id="tabs">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="sections">
+            <div class="section active">
+              <h4>Web Development</h4>
+              <p>
+                Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
+              </p>
+              <p>
+                Chances are, unless I’m a designer, I don’t know what I want. All I know is I want something functional that looks good, is comparable with my competitors, and features constant colour schemes for branding.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 copyright">
+          React © 2014
+        </div>
+        <div class="col-sm-6 menu">
+          <ul>
+                <li>
+                    <a href="features.html">Features</a>
+                </li>
+                <li>
+                  <a href="services.html">Services</a>
+                </li>
+                <li class="active">
+                    <a href="pricing.html">Pricing</a>
+                </li>
+                <li>
+                    <a href="support.html">Support</a>
+                </li>
+                <li>
+                    <a href="blog.html">Blog</a>
+                </li>
+              </ul>
+        </div>
+        <div class="col-sm-3 social">
+          <a href="#">
+            <img src="images/social/social-tw.png" alt="twitter" />
+          </a>
+          <a href="#">
+            <img src="images/social/social-dbl.png" alt="dribbble" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $(function () {
+      
+      // Enables the pricing tabs
+      $tabs = $("#tabs-option .tab");
+      $prices = $("#tabs-option .price");
+      $tabs.click(function () {
+        $tabs.removeClass("active");
+        $(this).addClass("active");
+        var dataPrice = $(this).hasClass("monthly") ? "monthly" : "anually";
+        $prices.each(function (index, el) {
+          $(el).html($(el).data(dataPrice));
+        });
+      });
+    });
+  </script>
+</body>
+
+
+
 

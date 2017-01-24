@@ -105,13 +105,10 @@
             <div class="plan-col col-sm-2">
               <div class="header">
                 Average Salary
-                <div class="price">
-                  Annual
-                </div>
               </div>
               <% @results.each do |result| %>
                 <div class="spec">
-                  <%= result.median_salary %>
+                  <%= number_to_currency(result.median_salary, precision: 0) %>
                 </div>
               <% end %>
 
@@ -120,13 +117,11 @@
             <div class="plan-col col-sm-2">
               <div class="header">
                 Cost of Living
-                <div class="price">
-                  Monthly
-                </div>
+                <p>Per Month</p>
               </div>
               <% @results.each do |result| %>
                 <div class="spec">
-                  <%= result.city.cost_of_living_monthly %>
+                  <%= number_to_currency(result.city.cost_of_living_monthly, precision: 0) %>
                 </div>
               <% end %>
 
@@ -134,14 +129,11 @@
             </div>
             <div class="plan-col col-sm-2">
               <div class="header">
-                Current Weather
-                <div class="price">
-                  Current Time
-                </div>
+                Population
               </div>
               <% @results.each do |result| %>
                 <div class="spec">
-                  <%= result.city.current_weather %>
+                  <%= number_with_delimiter(result.city.population, delimiter: ',') %>
                 </div>
               <% end %>
 
@@ -149,10 +141,7 @@
             </div>
             <div class="plan-col last col-sm-2">
               <div class="header">
-                Walk Score
-                <div class="price">
-                  asdf
-                </div>
+                Walk Score*
               </div>
               <% @results.each do |result| %>
                 <div class="spec">
@@ -181,9 +170,13 @@
           <div class="row questions">
             <div class="col-md-6">
               <div class="question">
-                <strong>Do I need a card to signup?</strong>
+                <strong>*Walk Score Scale</strong>
                 <p>
-                  There are many variations of passages of Lorem Ipsum available, but the randomised words which don’t look even slightly believable. If you are anything embarrassing hidden in the middle of text.
+                  90 - 100 | Daily errands do not require a car </br>
+                  70 - 89  | Most errands can be accomplished on foot </br>
+                  50 - 69  | Some errands can be accomplished on foot </br>
+                  25 - 49  | Most errands require a car </br>
+                  0  - 24  | Almost all errands require a car </br>
                 </p>
               </div>
             </div>

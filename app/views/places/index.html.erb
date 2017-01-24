@@ -105,7 +105,7 @@
               </div>
 
               <a href="blogpost.html" class="pic">
-                <img src="/assets/blogpost3.png" class="img-responsive" alt="blogpost" />
+                <img src="<%= city.image %>" class="img-responsive" alt="blogpost" />
               </a>
 
               <div class="author">
@@ -116,7 +116,7 @@
                 <p>State: <%= city.state %></p>
                 <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
                 <p>Cost of Living per Month: <%= city.cost_of_living_monthly %></p>
-                <p>Current Weather: <%= city.current_weather %></p>
+                <p>Current Weather: <%= "weather goes here" %></p>
                 <p>Walk Score: <%= city.walk_score %></p>
               </p>
 
