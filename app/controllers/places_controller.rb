@@ -18,7 +18,19 @@ class PlacesController < ApplicationController
   def show
     @city = City.find(params[:id])
     @job = Job.find(params[:job_id])
+    response = Unirest.get("http://api.wunderground.com/api/c20ea3216bd8b3f3/conditions/q/#{@city.state}/#{@city.name}.json").body
+
+    if response["current_observation"]
+      @weather = response["current_observation"]
+    else
+      @weather = "N/A"
+    end
+
+
   end
+
+
+
 
   def compare
     @results = [

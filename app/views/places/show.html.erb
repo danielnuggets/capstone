@@ -78,10 +78,6 @@
   </div>
 
 
-
-<h4>Occupation: <%= @job.title %></h4>
-<p>Average Salary Across US: <%= @job.national_median_salary %></p>
-
   
   <div id="hero">
     <div class="container dan">
@@ -91,30 +87,40 @@
         </div>
         <div class="col-md-7 info">
           <h3><%= @city.name + ", " + @city.state %></h3>
+          <% if @weather == "N/A" %>
+
+          <% else %>
+            <h4>Current Weather:</h4>
+            <p>
+            Temperature: <%= @weather["temp_f"] %> F</br>
+            <%= @weather["weather"] %></br>
+            Humidity: <%= @weather["relative_humidity"] %>
+            <img src=<%= @weather["icon_url"] %>>
+            </p>
+          <% end %>
           <p>
-            You will find a variety of ways to present your services such as grids and lists.
+            Occupation: <%= @job.title %>
             <br />
-            We plan to update this product with more pages and features as we keep on going.
+            Average Salary Across US: <%= number_to_currency(@job.national_median_salary, precision: 0) %>
           </p>
-          <p>Current Weather: <%= "weather goes here" %></p>
         </div>
       </div>
       <div class="row danstats">
         <div class="col-sm-3">
-          <strong><%= number_to_currency(JobByCity.find_by(city_id: @city.id, job_id: @job.id).median_salary, precision: 0) %></strong>
           Salary
+          <strong><%= number_to_currency(JobByCity.find_by(city_id: @city.id, job_id: @job.id).median_salary, precision: 0) %></strong>
         </div>
         <div class="col-sm-3">
-          <strong><%= number_to_currency(@city.cost_of_living_monthly, precision: 0) %></strong>
           Monthly Expenses
+          <strong><%= number_to_currency(@city.cost_of_living_monthly, precision: 0) %></strong>
         </div>
         <div class="col-sm-3">
-          <strong><%= number_with_delimiter(@city.population, delimiter: ',') %></strong>
           Population
+          <strong><%= number_with_delimiter(@city.population, delimiter: ',') %></strong>
         </div>
         <div class="col-sm-3">
-          <strong><%= @city.walk_score %></strong>
           Walk Score*
+          <strong><%= @city.walk_score %></strong>
         </div>
       </div>
     </div>
@@ -170,12 +176,6 @@
               </ul>
         </div>
         <div class="col-sm-3 social">
-          <a href="#">
-            <img src="images/social/social-tw.png" alt="twitter" />
-          </a>
-          <a href="#">
-            <img src="images/social/social-dbl.png" alt="dribbble" />
-          </a>
         </div>
       </div>
     </div>
