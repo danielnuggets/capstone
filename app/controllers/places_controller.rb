@@ -4,14 +4,23 @@ class PlacesController < ApplicationController
   end
 
   def index
-    @job = Job.find_by(title: params[:job_title])
-
-    #take the job that the user entered, sort the job_by_cities table by score in descending order, grabbing the first 5.
-    @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
-    p @results
-    @cities = []
-    @results.each do |result|
-      @cities << result.city
+    if params[:job_id]
+      @job = Job.find(params[:job_id])
+      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+      @cities = []
+      @results.each do |result|
+        @cities << result.city
+      end
+    elsif params[:job_title]
+      @job = Job.find_by(title: params[:job_title])
+      #take the job that the user entered, sort the job_by_cities table by score in descending order, grabbing the first 5.
+      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+      @cities = []
+      @results.each do |result|
+        @cities << result.city
+      end
+    else
+      redirect_to "/home"
     end
   end
 
