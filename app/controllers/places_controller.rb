@@ -4,22 +4,24 @@ class PlacesController < ApplicationController
   end
 
   def index
-    if params[:job_id]
+    @jobs = Job.all
+    if params[:job_id] && Job.exists?(params[:job_id])
       @job = Job.find(params[:job_id])
-      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(6)
       @cities = []
       @results.each do |result|
         @cities << result.city
       end
-    elsif params[:job_title]
+    elsif params[:job_title] && Job.exists?(title: params[:job_title])
       @job = Job.find_by(title: params[:job_title])
       #take the job that the user entered, sort the job_by_cities table by score in descending order, grabbing the first 5.
-      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(5)
+      @results = JobByCity.where(job_id: @job.id).order(score: :desc).limit(6)
       @cities = []
       @results.each do |result|
         @cities << result.city
       end
     else
+      flash[:error] = "Select an occupation from the drop-down."
       redirect_to "/home"
     end
   end
@@ -35,10 +37,7 @@ class PlacesController < ApplicationController
       @weather = "N/A"
     end
 
-
   end
-
-
 
 
   def compare
@@ -47,7 +46,8 @@ class PlacesController < ApplicationController
       JobByCity.find(params[:b]),
       JobByCity.find(params[:c]),
       JobByCity.find(params[:d]),
-      JobByCity.find(params[:e])
+      JobByCity.find(params[:e]),
+      JobByCity.find(params[:f])
     ]
   end
 end

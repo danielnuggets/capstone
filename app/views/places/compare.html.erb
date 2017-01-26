@@ -12,62 +12,9 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Home alts <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1 (Current)</a></li>
-              <li><a href="index2.html">Home 2 (Slider)</a></li>
-              <li><a href="index3.html">Home 3 (Off-canvas menu)</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Showcase <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="features.html">Features</a></li>
-              <li><a href="services.html">Services</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Pricing <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="pricing.html">Pricing charts</a></li>
-              <li><a href="charts.html">Comparison tables</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    More pages <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="aboutus.html">About us</a></li>
-              <li><a href="contactus.html">Contact us</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="portfolio-item.html">Portfolio Item</a></li>
-              <li><a href="invoice.html">Invoice page</a></li>
-              <li><a href="timeline.html">Timeline Page</a></li>
-              <li><a href="docs.html">API Documentation</a></li>
-              <li><a href="support.html">Support</a></li>
-              <li><a href="coming-soon.html">Coming Soon</a></li>
-              <li><a href="status.html">Status</a></li>
-              <li><a href="signup.html">Sign Up & Sign In</a></li>
-              <li><a href="signup-rotate.html">Sign Up Miscellaneous</a></li>
-              <li><a href="404.html">404 Page</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Blog <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blogpost.html">Blog Post</a></li>
-                </ul>
+                <a href="/home">
+                    Home
+                </a>
               </li>
             </ul>
         </nav>
@@ -83,10 +30,15 @@
         <div class="col-md-12"><div class="divider"></div></div>
       </div>
       <div class="row header">
-        <h3>Compare Your Results</h3>
-        <p>
-          Displaying results for <%= @results[0].job.title %>
-        </p>
+        <div class="col-md-3">
+          <a href=<%= "/places?job_id=#{@results[0].job.id}" %> class="button button-small">Back to Results</a>
+        </div>
+        <div class="col-md-6">
+          <h3>Comparison Table</h3>
+          <p>
+            Displaying results for <%= @results[0].job.title %>
+          </p>
+        </div>
       </div>
       <div class="row">
         <div class="col-md-12">
@@ -111,8 +63,6 @@
                   <%= number_to_currency(result.median_salary, precision: 0) %>
                 </div>
               <% end %>
-
-              <a href="signup.html" class="button button-small">Sign up free</a>
             </div>
             <div class="plan-col col-sm-2">
               <div class="header">
@@ -124,8 +74,6 @@
                   <%= number_to_currency(result.city.cost_of_living_monthly, precision: 0) %>
                 </div>
               <% end %>
-
-              <a href="signup.html" class="button button-small">Sign up free</a>
             </div>
             <div class="plan-col col-sm-2">
               <div class="header">
@@ -136,8 +84,6 @@
                   <%= number_with_delimiter(result.city.population, delimiter: ',') %>
                 </div>
               <% end %>
-
-              <a href="signup.html" class="button button-small">Sign up free</a>
             </div>
             <div class="plan-col last col-sm-2">
               <div class="header">
@@ -148,25 +94,12 @@
                   <%= result.city.walk_score %>
                 </div>
               <% end %>
-
-              <a href="signup.html" class="button button-small">Sign up free</a>
             </div>
           </div>
         </div>
       </div>
-      <div class="row message">
-        <p>
-          All of our plans come with a 30 day trial with no credit card required, we also offer a 
-          <a href="signup.html">free plan</a>.
-        </p>
-      </div>  
       <div class="row faq">
         <div class="col-md-12">
-          <div class="row header">
-            <div class="col-md-12">
-              <h3>Frequently Asked Questions</h3>
-            </div>
-          </div>
           <div class="row questions">
             <div class="col-md-6">
               <div class="question">
@@ -177,14 +110,6 @@
                   50 - 69  | Some errands can be accomplished on foot </br>
                   25 - 49  | Most errands require a car </br>
                   0  - 24  | Almost all errands require a car </br>
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="question">
-                <strong>Can I cancel at anytime?</strong>
-                <p>
-                  There are many variations of passages of Lorem Ipsum available, but the randomised words which don’t look even slightly believable. If you are anything embarrassing hidden in the middle of text.
                 </p>
               </div>
             </div>

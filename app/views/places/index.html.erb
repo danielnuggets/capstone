@@ -1,4 +1,4 @@
-<body id="blog"> 
+<body id="timeline"> 
   <header class="navbar navbar-inverse hero" role="banner">
       <div class="container">
         <div class="navbar-header">
@@ -12,62 +12,15 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Home alts <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1 (Current)</a></li>
-              <li><a href="index2.html">Home 2 (Slider)</a></li>
-              <li><a href="index3.html">Home 3 (Off-canvas menu)</a></li>
-                </ul>
+                <a href="/home">
+                    Home
+                </a>
               </li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Showcase <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="features.html">Features</a></li>
-              <li><a href="services.html">Services</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Pricing <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="pricing.html">Pricing charts</a></li>
-              <li><a href="charts.html">Comparison tables</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    More pages <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="aboutus.html">About us</a></li>
-              <li><a href="contactus.html">Contact us</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="portfolio-item.html">Portfolio Item</a></li>
-              <li><a href="invoice.html">Invoice page</a></li>
-              <li><a href="timeline.html">Timeline Page</a></li>
-              <li><a href="docs.html">API Documentation</a></li>
-              <li><a href="support.html">Support</a></li>
-              <li><a href="coming-soon.html">Coming Soon</a></li>
-              <li><a href="status.html">Status</a></li>
-              <li><a href="signup.html">Sign Up & Sign In</a></li>
-              <li><a href="signup-rotate.html">Sign Up Miscellaneous</a></li>
-              <li><a href="404.html">404 Page</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Blog <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blogpost.html">Blog Post</a></li>
-                </ul>
+                <% random_job_id = @jobs.sample.id %>
+                <a href=<%= "/places?job_id=#{random_job_id}" %> >
+                    Feeling Random
+                </a>
               </li>
             </ul>
         </nav>
@@ -77,96 +30,78 @@
   <div id="dan"> <!-- background image is in compiled/theme.css -->
   </div>
 
-
-
-<!-- WHAT IF THERE ARE LESS THAN 5 resultS? -->
-
-
-  <div id="posts">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-
-          <div class="danpost">
-            <div class="title">
-              <h4 id="dantitle">Your Results</h4>
-              <h3><%= link_to "Compare these cities", "/compare?a=#{@results[0].id}&b=#{@results[1].id}&c=#{@results[2].id}&d=#{@results[3].id}&e=#{@results[4].id}" %></h3>
-            </div>
-          </div>
-
-
-          <% i = 1 %>
-          <% @cities.each do |city| %>
-          <% p city %>
-
-            <div class="post">
-              <div class="title">
-                <a href="/places/<%= city.id %>?job_id=<%= @job.id %>">#<%= i %>: <%= city.name + ", " + city.state %></a>
+  <div class="danmargin">
+    <div id="blog">
+      <div id="posts">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 sidebar">
+              <div>
+                <a href=<%= "/compare?a=#{@results[0].id}&b=#{@results[1].id}&c=#{@results[2].id}&d=#{@results[3].id}&e=#{@results[4].id}&f=#{@results[5].id}" %> class="button button-large">Comparison Table</a>
+              </div></br>
+              <div class="search">
+                <form>
+                  <span class="icomoon-search"></span>
+                  <input type="text" name="job_title" id="job_title" placeholder="Enter new occupation..." list="job-title" />
+                  <datalist id='job-title'>
+                    <% @jobs.all.each do |job| %>
+                      <option value="<%= job.title %>"></option>
+                    <% end %>
+                  </datalist>
+                </form>
               </div>
-
-              <a href="blogpost.html" class="pic">
-                <img src="<%= city.image %>" class="img-responsive" alt="blogpost" />
-              </a>
-
-              <div class="author">
-                Benjamin Andrews, August 16, 2013
-              </div>
-
-              <p class="intro">
-                <p>State: <%= city.state %></p>
-                <p>Salary: <%= JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary %></p>
-                <p>Cost of Living per Month: <%= city.cost_of_living_monthly %></p>
-                <p>Current Weather: <%= "weather goes here" %></p>
-                <p>Walk Score: <%= city.walk_score %></p>
-              </p>
-
-              <a href="blogpost.html" class="continue-reading">Continue reading this post</a>
-
             </div>
-            <% i = i + 1 %>
-          <% end %>
-
-          <div class="pages">
-            <ul class="pagination">
-                <li><a href="#">&laquo;</a></li>
-                <li class="active"><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">&raquo;</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="col-md-3 sidebar">
-          <div class="search">
-            <form>
-              <span class="icomoon-search"></span>
-              <input type="text" name="q" placeholder="Enter new occupation..." />
-            </form>
-          </div>
-          <div class="updates">
-            <strong>
-              Showing results for: <%= @job.title %>
-              <i class="fa fa-rss"></i>
-            </strong>
-            <p>
-              The national average salary is <%= @job.national_median_salary %>
-            </p>
-          </div>
-    
-          <div class="best-hits">
-            <strong>Check out our best hits:</strong>
-            <a href="#">How to start a business</a>
-            <a href="#">How to sell online</a>
-            <a href="#">Climate change when needed</a>
-            <a href="#">Web development upstart</a>
-            <a href="#">Learn Rails in 30 days</a>
+            <div class="col-md-8 sidebar">
+              <div class="updates col-md-3 sidebar">
+                <h3>
+                <strong>
+                  Showing Results for: <%= @job.title %>
+                  <i class="fa fa-rss"></i>
+                </strong>
+                </h3>
+                The national average salary is <%= number_to_currency(@job.national_median_salary, precision: 0) %>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="timeline-wrapper">
+    <div class="container">
+      
+      <div class="year">
+        <span>Your Recommendations</span>
+      </div>
+
+      <% i = 1 %>
+      <% @cities.each do |city| %>
+
+        <div class="node <%= "left" if i.odd? %>">
+          <div class="marker"></div>
+          <a href="/places/<%= city.id %>?job_id=<%= @job.id %>">
+          <div class="entry" style="background-image:url(<%= city.image %>);">
+            <div class="intro">
+              <h4>#<%= i %>: <%= city.name + ", " + city.state %></h4>
+              <p>
+                Salary: <%= number_to_currency(JobByCity.find_by(city_id: city.id, job_id: @job.id).median_salary, precision: 0) %> 
+                <br />
+                Cost of Living per Month: <%= number_to_currency(city.cost_of_living_monthly, precision: 0) %>
+              </p>
+            </div>
+          </div>
+          </a>
+        </div>
+
+      <% i = i + 1 %>
+      <% end %>
+    </div>
+  </div>
+
+
+
+  
 
   <div id="footer">
     <div class="container">

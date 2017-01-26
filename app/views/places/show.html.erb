@@ -12,62 +12,9 @@
         <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Home alts <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="index.html">Home 1 (Current)</a></li>
-              <li><a href="index2.html">Home 2 (Slider)</a></li>
-              <li><a href="index3.html">Home 3 (Off-canvas menu)</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Showcase <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="features.html">Features</a></li>
-              <li><a href="services.html">Services</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Pricing <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="pricing.html">Pricing charts</a></li>
-              <li><a href="charts.html">Comparison tables</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    More pages <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="aboutus.html">About us</a></li>
-              <li><a href="contactus.html">Contact us</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="portfolio.html">Portfolio</a></li>
-              <li><a href="portfolio-item.html">Portfolio Item</a></li>
-              <li><a href="invoice.html">Invoice page</a></li>
-              <li><a href="timeline.html">Timeline Page</a></li>
-              <li><a href="docs.html">API Documentation</a></li>
-              <li><a href="support.html">Support</a></li>
-              <li><a href="coming-soon.html">Coming Soon</a></li>
-              <li><a href="status.html">Status</a></li>
-              <li><a href="signup.html">Sign Up & Sign In</a></li>
-              <li><a href="signup-rotate.html">Sign Up Miscellaneous</a></li>
-              <li><a href="404.html">404 Page</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Blog <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="blogpost.html">Blog Post</a></li>
-                </ul>
+                <a href="/home">
+                    Home
+                </a>
               </li>
             </ul>
         </nav>
@@ -83,7 +30,7 @@
     <div class="container dan">
       <div class="row" style="overflow:hidden;">
         <div class="col-md-5 image">
-          <img src=<%= @city.image %> class="img-responsive animated fadeInUp img-circle" alt="services1" height="375" width="500" >
+          <img src=<%= @city.image %> class="img-responsive animated fadeInUp img-rounded" alt="services1" height="375" width="500" >
         </div>
         <div class="col-md-7 info">
           <h3><%= @city.name + ", " + @city.state %></h3>
@@ -135,13 +82,14 @@
         <div class="col-md-12">
           <div class="sections">
             <div class="section active">
-              <h4>Web Development</h4>
-              <p>
-                Whether you want to fill this paragraph with some text like I'm doing right now, this place is perfect to describe some features or anything you want - React has a complete solution for you.
-              </p>
-              <p>
-                Chances are, unless I’m a designer, I don’t know what I want. All I know is I want something functional that looks good, is comparable with my competitors, and features constant colour schemes for branding.
-              </p>
+              <strong>*Walk Score Scale</strong>
+                <p>
+                  90 - 100 | Daily errands do not require a car </br>
+                  70 - 89  | Most errands can be accomplished on foot </br>
+                  50 - 69  | Some errands can be accomplished on foot </br>
+                  25 - 49  | Most errands require a car </br>
+                  0  - 24  | Almost all errands require a car </br>
+                </p>
             </div>
           </div>
         </div>
