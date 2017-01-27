@@ -1,0 +1,94 @@
+<body id="charts">
+  <header class="navbar navbar-inverse hero" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a href="/home" class="navbar-brand">YoUrban</a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav navbar-right">
+              <li class="dropdown">
+                <a href="/home">
+                    Home
+                </a>
+              </li>
+            </ul>
+        </nav>
+      </div>
+  </header>
+
+  <div id="dan"> <!-- background image is in compiled/theme.css -->
+  </div>
+
+  <div id="chart-option">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><div class="divider"></div></div>
+        </div>
+      <div class="row">
+        <div class="col-md-8">
+          <h3>About YoUrban</h3>
+          <p>
+            You can search and select an occupation from the dropdown menu. You will get a list of recommended cities based on two location-specific factors: average salary and cost of living. Given a specific occupation, the city with the largest difference between salary and cost of living will be ranked the highest.
+          </p>
+          <p>
+            The job data is compiled from the Bureau of Labor Statistics.
+          </p>
+          <p>
+            Features:
+          </p>
+          <ul>
+            <li>Feeling Random: Displays results for a randomly selected occupation</li>
+            <li>Comparison Table: compares results in a table with additional information for each city</li>
+          </ul>
+          <p>
+          This website was coded using:
+          <ul>
+            <li>Ruby on Rails</li>
+            <li>Javascript</li>
+            <li>Bootstrap</li>
+            <li>HTML & CSS</li>
+            <li>PostgreSQL</li>
+            <li>Wunderground API</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+
+  
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3 copyright">
+          YoUrban
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript">
+    $(function () {
+      
+      // Enables the pricing tabs
+      $tabs = $("#tabs-option .tab");
+      $prices = $("#tabs-option .price");
+      $tabs.click(function () {
+        $tabs.removeClass("active");
+        $(this).addClass("active");
+        var dataPrice = $(this).hasClass("monthly") ? "monthly" : "anually";
+        $prices.each(function (index, el) {
+          $(el).html($(el).data(dataPrice));
+        });
+      });
+    });
+  </script>
+</body>

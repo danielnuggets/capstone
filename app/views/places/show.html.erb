@@ -16,6 +16,11 @@
                     Home
                 </a>
               </li>
+              <li class="dropdown">
+                <a href=<%= "/about" %> >
+                    About
+                </a>
+              </li>
             </ul>
         </nav>
       </div>
@@ -32,23 +37,23 @@
         <div class="col-md-5 image">
           <img src=<%= @city.image %> class="img-responsive animated fadeInUp img-rounded" alt="services1" height="375" width="500" >
         </div>
-        <div class="col-md-7 info">
-          <h3><%= @city.name + ", " + @city.state %></h3>
+        <div class="col-md-7 info danshowmargin">
+          <h3 class= "danweathermargin"><%= @city.name + ", " + @city.state %></h3>
           <% if @weather == "N/A" %>
 
           <% else %>
-            <h4>Current Weather:</h4>
+            <h5>Current Weather Conditions:</h5>
             <p>
             Temperature: <%= @weather["temp_f"] %> F</br>
-            <%= @weather["weather"] %></br>
+            <%= @weather["weather"] %><img src=<%= @weather["icon_url"] %>></br>
             Humidity: <%= @weather["relative_humidity"] %>
-            <img src=<%= @weather["icon_url"] %>>
+            
             </p>
           <% end %>
           <p>
-            Occupation: <%= @job.title %>
+            <strong>Occupation:</strong> <%= @job.title %>
             <br />
-            Average Salary Across US: <%= number_to_currency(@job.national_median_salary, precision: 0) %>
+            <strong>Average Salary in USA:</strong> <%= number_to_currency(@job.national_median_salary, precision: 0) %>
           </p>
         </div>
       </div>
@@ -66,8 +71,8 @@
           <strong><%= number_with_delimiter(@city.population, delimiter: ',') %></strong>
         </div>
         <div class="col-sm-3">
-          Walk Score*
-          <strong><%= @city.walk_score %></strong>
+          Walk Score
+          <strong><%= @city.walk_score %>*</strong>
         </div>
       </div>
     </div>
@@ -75,21 +80,25 @@
 
 
 
-
-  <div id="tabs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="sections">
-            <div class="section active">
-              <strong>*Walk Score Scale</strong>
-                <p>
-                  90 - 100 | Daily errands do not require a car </br>
-                  70 - 89  | Most errands can be accomplished on foot </br>
-                  50 - 69  | Some errands can be accomplished on foot </br>
-                  25 - 49  | Most errands require a car </br>
-                  0  - 24  | Almost all errands require a car </br>
-                </p>
+  <div class="danmargin">
+    <div id="tabs">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="sections">
+              <div class="section active">
+                <strong>*Walk Score Scale</strong>
+                  <p>
+                    90 - 100 | Daily errands do not require a car </br>
+                    70 - 89  | Most errands can be accomplished on foot </br>
+                    50 - 69  | Some errands can be accomplished on foot </br>
+                    25 - 49  | Most errands require a car </br>
+                    0  - 24  | Almost all errands require a car </br>
+                  </p>
+                  <p>
+                    Source: https://www.walkscore.com
+                  </p>
+              </div>
             </div>
           </div>
         </div>
@@ -98,36 +107,17 @@
   </div>
 
   
+
   <div id="footer">
     <div class="container">
       <div class="row">
         <div class="col-sm-3 copyright">
-          React © 2014
-        </div>
-        <div class="col-sm-6 menu">
-          <ul>
-                <li>
-                    <a href="features.html">Features</a>
-                </li>
-                <li>
-                  <a href="services.html">Services</a>
-                </li>
-                <li class="active">
-                    <a href="pricing.html">Pricing</a>
-                </li>
-                <li>
-                    <a href="support.html">Support</a>
-                </li>
-                <li>
-                    <a href="blog.html">Blog</a>
-                </li>
-              </ul>
-        </div>
-        <div class="col-sm-3 social">
+          YoUrban
         </div>
       </div>
     </div>
   </div>
+
 
   <script type="text/javascript">
     $(function () {

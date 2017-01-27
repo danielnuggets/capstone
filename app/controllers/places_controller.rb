@@ -3,6 +3,9 @@ class PlacesController < ApplicationController
     @jobs = Job.all
   end
 
+  def about
+  end
+
   def index
     @jobs = Job.all
     if params[:job_id] && Job.exists?(params[:job_id])
