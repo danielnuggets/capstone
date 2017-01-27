@@ -72,11 +72,11 @@
             <div class="plan-col col-sm-2">
               <div class="header">
                 Cost of Living
-                <p>Per Month</p>
+                <p>Per Year</p>
               </div>
               <% @results.each do |result| %>
                 <div class="spec">
-                  <%= number_to_currency(result.city.cost_of_living_monthly, precision: 0) %>
+                  <%= number_to_currency(result.city.cost_of_living_monthly * 12, precision: 0) %>
                 </div>
               <% end %>
             </div>

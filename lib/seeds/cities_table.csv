@@ -10,7 +10,7 @@ id,name,state,cost_of_living_index,cost_of_living_monthly,walk_score,image,popul
 9,Dallas,TX,56.77,1661.63,45,"http://dcvbsv.imgix.net/Dallas-Arts-District0.jpg?w=800&h=600&fit=crop&crop=entropy,faces&q=60&fm=pjpg&auto=compress,enhance,format,redeye&trim=auto",1300092
 10,San Jose,CA,84.03,3038.48,50,http://www.richmatlack.com/wp-content/uploads/2014/06/san-jose.jpg,1026908
 11,Austin,TX,63.21,1806.10,39,http://www.culhanemeadows.com/wp-content/uploads/2014/10/Austin_th.jpg,931830
-12,Jacksonville,FL,55.66,1588.19,26,http://cdn.visitjacksonville.com/itineraries/33609/ketterman_130124_0135(1920x900)__large.jpg,868031
+12,Jacksonville,FL,55.66,1588.19,26,http://www.fortunebuilders.com/wp-content/uploads/2015/01/jacksonville-housing-market-summary.jpg,868031
 13,San Francisco,CA,111.97,3679.99,86,http://mcmanuslab.ucsf.edu/sites/mcmanuslab.ucsf.edu/files/imagepicker/m/mmcmanus/san-francisco.jpg,864816
 14,Indianapolis,IN,54.39,1522.74,29,https://s-media-cache-ak0.pinimg.com/originals/a6/b8/fe/a6b8fe670e0f4e0468596df87ed0ae0f.jpg,853173
 15,Columbus,OH,53.37,1474.53,40,http://jayneshomeloan.com/wp-content/uploads/2013/10/beautiful-columbus-oh-at-night.jpg,850106
@@ -20,7 +20,7 @@ id,name,state,cost_of_living_index,cost_of_living_monthly,walk_score,image,popul
 19,Denver,CO,69.25,2090.35,60,http://media.yalea.com:8080/galeries/cities/USADestinationsDenverSelection/Skyline.jpg,682545
 20,El Paso,TX,44.93,1347.90,40,https://activerain-store.s3.amazonaws.com/image_store/uploads/6/3/4/4/1/ar12234115514436.JPG,681124
 21,Detroit,MI,57.82,1611.55,55,https://lsa.umich.edu/sid/events-news/all-news/what-s-the-state-of-detroit-city-in-2016-/_jcr_content/image.transform/xbig/image.jpg,677116
-22,"Washington, D.C.",DC,88.53,2833.86,77,http://www.ilaxstudio.com/DC-008_blank.jpg,672228
+22,"Washington, D.C.",DC,88.53,2833.86,77,https://static1.squarespace.com/static/53dbe339e4b0c5353844bc99/t/58176703c534a576aa3d9d46/1477928713235/,672228
 23,Boston,MA,83.82,2604.71,81,http://d1kcl3yiuixneo.cloudfront.net/wp-content/uploads/view-from-skywalk-observatory-prudential-center-boston-massachusetts-IMG_1105-800x600.jpg,667137
 24,Memphis,TN,51.98,1559.40,36,https://www.sweetmagnoliatours.com/wp-content/uploads/2014/06/Memphis-skyline.jpg,655770
 25,Nashville,TN,61.75,1852.50,28,http://www.thetravelclique.com/wp-content/uploads/The-Travel-Clique-General-Jackson-Exterior-800x600.jpg,654610
@@ -79,7 +79,7 @@ id,name,state,cost_of_living_index,cost_of_living_monthly,walk_score,image,popul
 78,Birmingham,AL,46.2,1386.00,35,http://www.bcen.net/wp-content/uploads/2016/11/1.jpg,212461
 79,Modesto,CA,60.49,1814.70,45,http://www.capradio.org/media/6150865/ModestoArch.jpg,211266
 80,Des Moines,IA,57,1710.00,44,http://static4.businessinsider.com/image/51c32da8ecad046427000012-800-/des-moines.png,210330
-81,Rochester,NY,50.61,1518.30,64,http://pics4.city-data.com/cpicc/cfiles59281.jpg,209802
+81,Rochester,NY,50.61,1518.30,64,https://rochester.massmutual.com/-/media/subcontent/aba/aba/homepage/084-has1-rochester.jpg,209802
 82,Tacoma,WA,57.54,1726.20,53,https://www.homesnacks.net/images/wa/tacoma-wa-5.jpg,207948
 83,Oxnard,CA,80.31,2409.30,53,https://activerain-store.s3.amazonaws.com/image_store/uploads/1/8/6/0/6/ar13058480860681.JPG,207254
 84,Fayetteville,NC,45.06,1351.80,20,"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Market_House_in_Fayetteville,_NC.jpg/800px-Market_House_in_Fayetteville,_NC.jpg",201963
@@ -94,7 +94,7 @@ id,name,state,cost_of_living_index,cost_of_living_monthly,walk_score,image,popul
 93,Mobile,AL,46.3,1389.00,32,http://www.cruisemapper.com/images/ports/3301-large-a95903ff7641d5bc2759671cc85269ce.jpg,194288
 94,Salt Lake City,UT,52.3,1569.00,56,https://res.cloudinary.com/simpleview/image/upload/crm/saltlake/Airport-Overview-I0_faca0589-fb35-da88-e951cdc0774cc0b6.jpg,192672
 95,Huntsville,AL,48,1440.00,23,http://www.huntsville-alabama.net/HSV_park.jpg,190582
-96,Tallahassee,FL,52.72,1581.60,32,http://www.tallahasseemagazine.com/Exterior-Aerial-View_cc_final(1).jpg,189907
+96,Tallahassee,FL,52.72,1581.60,32,http://tallylatindancefest.com/wp-content/uploads/2014/01/BannerTallahassee1.jpg,189907
 97,Knoxville,TN,51.81,1554.30,31,http://volresearch.com/wp-content/uploads/FairSite1.jpg,185291
 98,Worcester,MA,67.24,2017.20,56,http://harringtonoilinc.com/towns/pic-Worcester.jpg,184815
 99,Brownsville,TX,33.65,1009.50,38,"https://media.pitchup.co.uk/images/5/image/private/s--OWXo_uH_--/c_fill,h_600,w_800/e_improve,fl_progressive/q_jpegmini/v1453241969/breeze_lake_rv_campground/x125877.jpg.pagespeed.ic.DIwBFMUWuo.jpg",183887
@@ -115,7 +115,7 @@ id,name,state,cost_of_living_index,cost_of_living_monthly,walk_score,image,popul
 114,Springfield,MA,57.9,1737.00,38,http://mediad.publicbroadcasting.net/p/wnpr/files/styles/medium/public/201510/court_square__springfield_ma_0.jpg,154341
 115,Macon,GA,47.04,1411.20,31,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/DowntownMaconGa.jpg/800px-DowntownMaconGa.jpg,153515
 116,Clarksville,TN,48.92,1467.60,17,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/ClarksvilleTN_VisitorCenter.jpg/800px-ClarksvilleTN_VisitorCenter.jpg,149176
-117,Rockford,IL,36.21,1086.30,41,https://www.homesnacks.net/images/il/rockford-il-7.jpg,148278
+117,Rockford,IL,36.21,1086.30,41,https://static1.squarespace.com/static/55c8c528e4b0018a6aba10f5/55c916cde4b094e2e5256106/562fe8fae4b0926a4a5c9bd1/1445980418127/archbridgereflections.jpg?format=2500w,148278
 118,Bridgeport,CT,69.4,2082.00,68,https://www.homesnacks.net/images/ct/bridgeport-ct-15.jpg,147629
 119,Savannah,GA,52.8,1584.00,42,http://uat15.tangeroutlet.com/images/centermedia/savannah/6398/2,145674
 120,Syracuse,NY,52.26,1567.80,60,https://www.maxwell.syr.edu/uploadedImages/exed/sites/ifs/armory%20square.jpg?n=5948,144142
