@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+# for heroku
+gem 'rails_12factor', group: :production
 # unirest
 gem 'unirest'
 # bootstrap
